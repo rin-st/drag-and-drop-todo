@@ -1,0 +1,21 @@
+input {
+  font-size: 30px;
+}
+
+button {
+  border-radius: 4px;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  font-size: 20px;
+  background: powderblue;
+  transition: background-color .5s;
+  cursor: pointer;
+  &:hover {
+    background: lightskyblue;
+  }
+  &:disabled {
+    cursor: auto;
+    background: lightgray;
+  }
+}

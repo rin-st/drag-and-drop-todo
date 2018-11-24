@@ -1,0 +1,33 @@
+.todo {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+  flex-shrink: 0;
+  &__button {
+    padding: 0 15px;
+    height: 36px;
+    &--green {
+      background: palegreen;
+      &:hover {
+        background: mediumspringgreen;
+      }
+    }
+    &--red {
+      background: lightpink;
+      &:hover {
+        background: lightcoral;
+      }
+    }
+  }
+  &__completed {
+    span {
+      text-decoration: line-through;
+      color: gray;
+    }
+  }
+}

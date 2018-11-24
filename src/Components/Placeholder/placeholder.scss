@@ -1,0 +1,13 @@
+.placeholder {
+  margin-bottom: 10px;
+  display: block;
+  border: 1px dashed gray;
+  border-radius: 5px;
+  &:before {
+    content: "Drop here";
+    color: lightgray;
+    font-size: 30px;
+    display: block;
+    padding: 10px 20px;
+  }
+}

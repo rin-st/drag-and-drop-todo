@@ -1,0 +1,11 @@
+.app {
+  margin: 50px auto;
+  width: 1000px;
+  &__add-button {
+    margin-left: 0;
+  }
+  &__add-task {
+    display: flex;
+    align-items: center;
+  }
+}
