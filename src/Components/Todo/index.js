@@ -10,7 +10,12 @@ export default class Todo extends Component {
     this.setState({task: this.props.task})
   }
   onChangeHandler = e => {
-    this.setState({task: e.target.value})
+    this.setState({task: e.target.value});
+  }
+  onKeyPressHandler = e => {
+    if (e.key === 'Enter') {
+      this.onEditHandler();
+    }
   }
   onEditHandler = () => {
     if (this.state.edit) {
@@ -36,12 +41,15 @@ export default class Todo extends Component {
         ? <input 
             type="text" 
             value={this.state.task} 
-            onChange={e=>this.onChangeHandler(e)}/>
+            onChange={e=>this.onChangeHandler(e)}
+            onKeyPress={e=>this.onKeyPressHandler(e)}/>
         : <span>{this.state.task}</span>}
         <button 
+          disabled={this.state.task === ''}
           className="todo__button todo__button--edit"
           onClick={this.onEditHandler}>Edit</button>
         {!completed && <button 
+          disabled={this.state.edit}
           className="todo__button todo__button--green"
           onClick={this.onCompleteHandler}>✓</button>}
         <button 

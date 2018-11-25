@@ -13,7 +13,7 @@
     height: 36px;
     &--green {
       background: palegreen;
-      &:hover {
+      &:not(:disabled):hover {
         background: mediumspringgreen;
       }
     }
@@ -29,5 +29,8 @@
       text-decoration: line-through;
       color: gray;
     }
+  }
+  &__hidden {
+    opacity: 0;
   }
 }
